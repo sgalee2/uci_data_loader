@@ -6,9 +6,9 @@ from math import floor
 
 class UCI_Dataset():
 
-    def __init__(self, dataset, seed, device):
+    def __init__(self, dataset, seed, device, dtype=torch.float32):
 
-        self.dataset = dataset()
+        self.dataset = dataset(dtype=dtype)
         self.seed = seed
         self.device = device
         self.preprocess()
